@@ -3,19 +3,9 @@ $(document).ready(function() {
     let city = $('#location').val();
     $('#location').val("");
 
-    let promise = new Promise(function(resolve, reject) {
-      let request = new XMLHttpRequest();
-      let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=[API-KEY-GOES-HERE]`;
-      request.onload = function() {
-        if (this.status === 200) {
-          resolve(request.response);
-        } else {
-          reject(Error(request.statusText));
-        }
-      }
-      request.open("GET", url, true);
-      request.send();
-    });
+
+    let weatherService = new WeatherService();  // create instance of WeatherService class
+    let promise = weatherService.getWeatherByCity(city);  // call the instance method and pass in user input
 
     promise.then(function(response) {
       body = JSON.parse(response);
@@ -25,4 +15,5 @@ $(document).ready(function() {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
     });
   });
+
 });
