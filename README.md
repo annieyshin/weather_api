@@ -1,18 +1,18 @@
 # Project Title
 
-#### Epicodus JavaScript exercise, Date
+#### Epicodus JavaScript exercise, August 08, 2018
 
-#### By Your Name Here
+#### By Annie Shin
 
 ## Description
 
-Add description here
+Website that utilizes the open weather map api to show the current temperature and humidity based upon city location.
 
 ## Specs
 
 | Behavior | Input | Output |
 |----------|-------|--------|
-| Behavior | input | output |
+| User input prompt | Enter city location| temperature (Kelvin) and humidity are displayed |
 
 ## Setup on OSX
 
@@ -45,10 +45,11 @@ Add description here
 
 ## Links
 
-* Add links here
+* Visit this website to view repository: https://github.com/annieyshin/weather_api.git
+* Contact me via email if you have any questions or want to report a bug: annieyshin@gmail.com
 
 ## License
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2018 **Your Name Here**
+Copyright (c) 2018 **Annie Shin**
