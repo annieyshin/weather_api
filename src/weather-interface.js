@@ -1,3 +1,5 @@
+import { WeatherService } from "./weather-service.js"
+
 $(document).ready(function() {
   $('#weatherLocation').click(function() {
     let city = $('#location').val();
@@ -8,7 +10,8 @@ $(document).ready(function() {
     let promise = weatherService.getWeatherByCity(city);  // call the instance method and pass in user input
 
     promise.then(function(response) {
-      body = JSON.parse(response);
+      let body = JSON.parse(response);
+      console.log(body.main.humidity);
       $('.showHumidity').text(`The humidity in ${city} is ${body.main.humidity}%`);
       $('.showTemp').text(`The temperature in Kelvins is ${body.main.temp} degrees.`);
     }, function(error) {
